@@ -940,6 +940,8 @@
             position: relative;
             height: 70vh;
             overflow: hidden;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
         }
 
         .video-interlude video {
@@ -951,7 +953,7 @@
         .video-interlude-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, var(--bg) 0%, rgba(3,3,3,0.2) 30%, rgba(3,3,3,0.2) 70%, var(--bg) 100%);
+            background: rgba(10, 10, 10, 0.3);
         }
 
         .video-interlude-text {
@@ -1002,9 +1004,14 @@
         /* ============================================
            FILM STRIP SECTION
            ============================================ */
-        .film-strip-section {
-            padding: clamp(60px, 10vh, 120px) 0;
+         .film-strip-section {
+            padding: clamp(80px, 12vh, 160px) 0;
             overflow: hidden;
+            position: relative;
+        }
+
+        .film-strip-sticky {
+            width: 100%;
         }
 
         .film-strip-header {
@@ -1017,7 +1024,7 @@
         .film-strip-track {
             display: flex;
             gap: 20px;
-            padding: 0 20px;
+            padding: 0 40px;
             width: max-content;
         }
 
@@ -1207,7 +1214,7 @@
     <section class="hero" id="hero">
         <div class="hero-video-wrap">
             <video autoplay loop muted playsinline id="heroVideo">
-                <source src="https://videos.pexels.com/video-files/3205315/3205315-hd_1920_1080_25fps.mp4" type="video/mp4">
+                <source src="https://cdn.pixabay.com/video/2024/04/10/207585_large.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
         </div>
@@ -1222,7 +1229,7 @@
                 </h1>
 
                 <p class="hero-sub" id="heroSub">
-                    3rd year middle school student with a dream of becoming a developer. Building WebApps and flying my DJI Mini 4K.
+                    15. Self-taught. I don't wait for opportunities — I build them. Shipping production WebApps and capturing 4K aerials with my DJI Mini 4K.
                 </p>
 
                 <div class="hero-ctas" id="heroCtas">
@@ -1276,7 +1283,7 @@
          ============================================ -->
     <section id="portfolio" class="section">
         <div class="portfolio-grid">
-            <div class="browser-mockup reveal-up" data-tilt>
+            <div class="browser-mockup reveal-up" data-tilt id="califorgeFrame">
                 <div class="browser-bar">
                     <div class="browser-dot red"></div>
                     <div class="browser-dot yellow"></div>
@@ -1327,7 +1334,7 @@
          ============================================ -->
     <section class="video-interlude" id="interlude1">
         <video autoplay loop muted playsinline id="interludeVideo1">
-            <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2732_1440_30fps.mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2025/03/03/262215_large.mp4" type="video/mp4">
         </video>
         <div class="video-interlude-overlay"></div>
         <div class="video-interlude-text">
@@ -1354,7 +1361,7 @@
                 <!-- FEATURED WIDE SHOT -->
                 <div class="drone-card featured reveal-up" data-tilt data-cursor="Play">
                     <video autoplay loop muted playsinline>
-                        <source src="https://videos.pexels.com/video-files/1739010/1739010-uhd_2560_1440_24fps.mp4" type="video/mp4">
+                        <source src="https://cdn.pixabay.com/video/2025/05/01/276047_large.mp4" type="video/mp4">
                     </video>
                     <div class="drone-card-overlay"></div>
                     <div class="drone-card-info">
@@ -1366,7 +1373,7 @@
                 <!-- SHOT 1 -->
                 <div class="drone-card reveal-up" data-tilt data-cursor="Play">
                     <video autoplay loop muted playsinline>
-                        <source src="https://videos.pexels.com/video-files/2611150/2611150-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                        <source src="https://cdn.pixabay.com/video/2023/11/05/188057-881538748_large.mp4" type="video/mp4">
                     </video>
                     <div class="drone-card-overlay"></div>
                     <div class="drone-card-info">
@@ -1378,7 +1385,7 @@
                 <!-- SHOT 2 -->
                 <div class="drone-card reveal-up" data-tilt data-cursor="Play">
                     <video autoplay loop muted playsinline>
-                        <source src="https://videos.pexels.com/video-files/3629519/3629519-uhd_2560_1440_24fps.mp4" type="video/mp4">
+                        <source src="https://cdn.pixabay.com/video/2025/11/07/314643_large.mp4" type="video/mp4">
                     </video>
                     <div class="drone-card-overlay"></div>
                     <div class="drone-card-info">
@@ -1390,7 +1397,7 @@
                 <!-- SHOT 3 -->
                 <div class="drone-card reveal-up" data-tilt data-cursor="Play">
                     <video autoplay loop muted playsinline>
-                        <source src="https://videos.pexels.com/video-files/1093662/1093662-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                        <source src="https://cdn.pixabay.com/video/2023/11/29/191354-890134722_large.mp4" type="video/mp4">
                     </video>
                     <div class="drone-card-overlay"></div>
                     <div class="drone-card-info">
@@ -1402,7 +1409,7 @@
                 <!-- SHOT 4 -->
                 <div class="drone-card reveal-up" data-tilt data-cursor="Play">
                     <video autoplay loop muted playsinline>
-                        <source src="https://videos.pexels.com/video-files/3194277/3194277-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                        <source src="https://cdn.pixabay.com/video/2024/10/18/236893_large.mp4" type="video/mp4">
                     </video>
                     <div class="drone-card-overlay"></div>
                     <div class="drone-card-info">
@@ -1418,6 +1425,7 @@
          FILM STRIP HORIZONTAL SCROLL
          ============================================ -->
     <section class="film-strip-section">
+        <div class="film-strip-sticky">
         <div class="film-strip-header reveal-up">
             <div class="section-label" style="justify-content:center">
                 <i data-lucide="film" style="width:14px;height:14px"></i>
@@ -1428,46 +1436,47 @@
         <div class="film-strip-track" id="filmStrip">
             <div class="film-strip-item" data-cursor="View">
                 <video autoplay loop muted playsinline>
-                    <source src="https://videos.pexels.com/video-files/4763824/4763824-uhd_2560_1440_24fps.mp4" type="video/mp4">
+                    <source src="https://cdn.pixabay.com/video/2021/04/12/70796-538877060_large.mp4" type="video/mp4">
                 </video>
                 <div class="film-strip-item-overlay"></div>
                 <div class="film-strip-item-info"><h4>River Bend</h4><span>AERIAL / 4K</span></div>
             </div>
             <div class="film-strip-item" data-cursor="View">
                 <video autoplay loop muted playsinline>
-                    <source src="https://videos.pexels.com/video-files/1654172/1654172-uhd_2560_1440_24fps.mp4" type="video/mp4">
+                    <source src="https://cdn.pixabay.com/video/2024/07/25/223069_large.mp4" type="video/mp4">
                 </video>
                 <div class="film-strip-item-overlay"></div>
                 <div class="film-strip-item-info"><h4>City Lights</h4><span>DRONE / NIGHT</span></div>
             </div>
             <div class="film-strip-item" data-cursor="View">
                 <video autoplay loop muted playsinline>
-                    <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2732_1440_30fps.mp4" type="video/mp4">
+                    <source src="https://cdn.pixabay.com/video/2022/03/19/111263-690770660_large.mp4" type="video/mp4">
                 </video>
                 <div class="film-strip-item-overlay"></div>
                 <div class="film-strip-item-info"><h4>Urban Grid</h4><span>TOP-DOWN / 4K</span></div>
             </div>
             <div class="film-strip-item" data-cursor="View">
                 <video autoplay loop muted playsinline>
-                    <source src="https://videos.pexels.com/video-files/4328401/4328401-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                    <source src="https://cdn.pixabay.com/video/2019/06/26/24746-344986280_large.mp4" type="video/mp4">
                 </video>
                 <div class="film-strip-item-overlay"></div>
                 <div class="film-strip-item-info"><h4>Cloud Break</h4><span>ORBIT / 4K</span></div>
             </div>
             <div class="film-strip-item" data-cursor="View">
                 <video autoplay loop muted playsinline>
-                    <source src="https://videos.pexels.com/video-files/2491284/2491284-uhd_2560_1440_24fps.mp4" type="video/mp4">
+                    <source src="https://cdn.pixabay.com/video/2026/02/15/334716_large.mp4" type="video/mp4">
                 </video>
                 <div class="film-strip-item-overlay"></div>
                 <div class="film-strip-item-info"><h4>Horizon Line</h4><span>TRACKING / 4K</span></div>
             </div>
             <div class="film-strip-item" data-cursor="View">
                 <video autoplay loop muted playsinline>
-                    <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2732_1440_30fps.mp4" type="video/mp4">
+                    <source src="https://cdn.pixabay.com/video/2025/03/03/262215_large.mp4" type="video/mp4">
                 </video>
                 <div class="film-strip-item-overlay"></div>
                 <div class="film-strip-item-info"><h4>Coastal Sweep</h4><span>POI / 4K</span></div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -1493,7 +1502,7 @@
                 <a href="#" class="social-icon" data-magnetic data-cursor="Instagram">
                     <i data-lucide="instagram" style="width:22px;height:22px"></i>
                 </a>
-                <a href="mailto:sotosvbusiness@gmail.com" class="social-icon" data-magnetic data-cursor="Email">
+                <a href="https://mail.google.com/mail/?view=cm&to=sotosvbusiness@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" data-magnetic data-cursor="Email">
                     <i data-lucide="mail" style="width:22px;height:22px"></i>
                 </a>
                 <a href="tel:+306981847788" class="social-icon" data-magnetic data-cursor="Call">
@@ -1502,7 +1511,7 @@
             </div>
 
             <div class="contact-links">
-                <a href="mailto:sotosvbusiness@gmail.com" data-magnetic>
+                <a href="https://mail.google.com/mail/?view=cm&to=sotosvbusiness@gmail.com" target="_blank" rel="noopener noreferrer" data-magnetic>
                     <i data-lucide="mail" style="width:16px;height:16px"></i>
                     sotosvbusiness@gmail.com
                 </a>
@@ -1798,19 +1807,43 @@
             });
         }
 
-        // ── FILM STRIP HORIZONTAL SCROLL ──
+        // ── FILM STRIP HORIZONTAL SCROLL (pinned) ──
         const filmStrip = document.getElementById('filmStrip');
         if (filmStrip) {
-            const totalW = filmStrip.scrollWidth - window.innerWidth;
             gsap.to(filmStrip, {
-                x: -totalW,
+                x: () => {
+                    const diff = filmStrip.scrollWidth - window.innerWidth + 80;
+                    return diff > 0 ? -diff : 0;
+                },
                 ease: 'none',
                 scrollTrigger: {
                     trigger: '.film-strip-section',
-                    start: 'top 80%',
-                    end: 'bottom 20%',
+                    start: 'center center',
+                    end: () => {
+                        const diff = filmStrip.scrollWidth - window.innerWidth + 80;
+                        return '+=' + (diff > 0 ? diff : 0);
+                    },
                     scrub: 1,
+                    pin: true,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true,
                 }
+            });
+        }
+
+        // ── HIDE CURSOR OVER CALIFORGE IFRAME ──
+        const caliFrame = document.getElementById('califorgeFrame');
+        if (caliFrame && dot && ring) {
+            // Using a simple interval check to ensure cursor stays hidden while over the iframe area
+            // because mouseleave might not fire reliably when pointer enters child iframe.
+            caliFrame.addEventListener('mouseenter', () => {
+                dot.style.display = 'none';
+                ring.style.display = 'none';
+                if (cursorLabel) cursorLabel.style.display = 'none';
+            });
+            caliFrame.addEventListener('mouseleave', () => {
+                dot.style.display = 'block';
+                ring.style.display = 'block';
             });
         }
 
