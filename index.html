@@ -1782,7 +1782,8 @@
             </div>
 
             <div class="contact-form-card reveal-up" id="contactFormCard">
-                <form id="contactForm" action="/api/submit" method="POST">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="14951950-025c-4ee4-b34b-1e4c7faf65f0">
                     <input type="hidden" name="subject" value="New message from portfolio">
                     <input type="hidden" name="from_name" value="Portfolio Contact Form">
                     <input type="checkbox" name="botcheck" style="display:none">
@@ -2207,7 +2208,7 @@
                 btn.classList.add('sending');
 
                 try {
-                    const res = await fetch('/api/submit', {
+                    const res = await fetch('https://api.web3forms.com/submit', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                         body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
