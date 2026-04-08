@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="favicon.png">
-<link rel="shortcut icon" type="image/png" href="favicon.png">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev & Drone Pilot — Portfolio</title>
     <meta name="description" content="Full-stack developer and DJI Mini 4K drone pilot. Building WebApps and capturing 4K aerial cinematography.">
@@ -12,7 +9,8 @@
     <!-- CSP & Security -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://api.web3forms.com https://*.spline.design https://my.spline.design https://cdnjs.cloudflare.com https://unpkg.com; img-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com;">
 
-
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1784,8 +1782,7 @@
             </div>
 
             <div class="contact-form-card reveal-up" id="contactFormCard">
-                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="14951950-025c-4ee4-b34b-1e4c7faf65f0">
+                <form id="contactForm" action="/api/submit" method="POST">
                     <input type="hidden" name="subject" value="New message from portfolio">
                     <input type="hidden" name="from_name" value="Portfolio Contact Form">
                     <input type="checkbox" name="botcheck" style="display:none">
@@ -2210,7 +2207,7 @@
                 btn.classList.add('sending');
 
                 try {
-                    const res = await fetch('https://api.web3forms.com/submit', {
+                    const res = await fetch('/api/submit', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                         body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
